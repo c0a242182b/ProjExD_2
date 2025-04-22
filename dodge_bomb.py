@@ -81,7 +81,6 @@ def main():
         # こうかとんRectと爆弾Rectが重なっていたら
         if kk_rct.colliderect(bb_rct): 
             gameover(screen)
-            
             pg.display.update()
             time.sleep(5)
             
