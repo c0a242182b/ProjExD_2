@@ -43,7 +43,16 @@ def gameover(screen: pg.Surface) -> None:
     screen.blit(img,[340,290])
     screen.blit(img,[720,290])
     
-
+#def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
+ 
+#     bb_accs = [a for a in range (1,11)]
+#     bb_imgs = []
+#     for r in range(1,11):
+#         bb_img = pg.Surface((20*r, 20*r))
+#         pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)
+#         bb_img.set_colorkey((0,0,0))
+#         bb_imgs.append(bb_img)
+#     return bb_accs,bb_imgs   #途中
 
 
 def main():
@@ -84,6 +93,10 @@ def main():
             if key_lst[key]:
                 sum_mv[0] += mv[0]
                 sum_mv[1] += mv[1]
+        
+        bb_accs = [a for a in range(1,11)]
+        
+        
 
 
         kk_rct.move_ip(sum_mv)
@@ -108,6 +121,11 @@ def main():
     
     clock = pg.time.Clock()
     tmr = 0
+
+#    bb_accs , bb_imgs = init_bb_imgs()  #途中
+#       avx = vx*bb_accs[min(tmr//500,9)]
+#       bb_img = bb_imgs[min(tmr//500,9)]
+#       bb_rct.move_ip(avx,vy)
 
 
 
